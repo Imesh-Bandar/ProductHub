@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 3000;
 
 
 
-
+app.get('/products', (req, res) => {
+    res.send('Hello, World!');
+});
 
 
 //create a simple server
