@@ -1,2 +1,0 @@
-# ProductHub
-MERN STACK PROJECT

@@ -1,6 +1,0 @@
-node_modules/
-dist/
-# Logs
-logs
-package-lock.json
-package.json
