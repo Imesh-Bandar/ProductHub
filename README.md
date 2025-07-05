@@ -18,8 +18,6 @@ ProductHub is a full-stack web application built using the MERN stack (MongoDB, 
 ## Features
 
 - **Product Management**: Create, view, update, and delete products.
-- **User Authentication**: Secure login and registration (JWT-based, if included).
-- **Search & Filter**: Easily find products using search and filter functionalities.
 - **Responsive UI**: User-friendly interface built with React.
 - **RESTful API**: Robust backend with Express.js and MongoDB.
 
@@ -88,7 +86,6 @@ ProductHub/
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
-│   ├── middleware/
 │   └── server.js
 ├── frontend/
 │   ├── src/
