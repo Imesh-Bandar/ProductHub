@@ -4,18 +4,22 @@ import { connectMongoDB } from "./config/dbconnection.js";
 // Import the product model
 import Product from "./models/product.model.js";
 
+const app = express();
+const PORT = 5000 || process.env.PORT;
+
 // Load environment variables from .env file
 dotenv.config();
 
-const app = express();
-const PORT = 5000;
+
+
+
 // Middleware : allow us to parse JSON data from the request body
 app.use(express.json());
 
+
 //==================|| Product API Routes -POST ||==================//
 
-// This route will handle the creation of new products
-
+// This route will handle the creation of new product
 //Implement the product create route
 app.post("/api/product", async (req, res) => {
     //get product from customer send using frontend request body
@@ -61,8 +65,11 @@ app.post("/api/product", async (req, res) => {
     }
 });
 
-//==================|| Product API Routes - DELETE ||==================//
 
+
+
+
+//==================|| Product API Routes - DELETE ||==================//
 app.delete("/api/product/:id", async (req, res) => {
     //get the product id from url parameters
     const { id } = req.params;
