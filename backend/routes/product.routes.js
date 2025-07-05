@@ -4,11 +4,11 @@ import mongoose from "mongoose";
 
 const app = express();
 const router = express.Router();
- // Middleware to parse JSON data from request body
+// Middleware to parse JSON data from request body
 
 
 
- 
+
 
 //==================|| Product API Routes START -POST ||==================//
 //Implement the product create route
@@ -42,6 +42,32 @@ router.post("/create", async (req, res) => {
     }
 });
 //==================|| Product API Routes END -POST ||==================//
+
+
+
+//==================|| Product API Routes START -GET BY ID ||==================//
+router.get('/:id', async (req, res) => {
+    const { id } = req.params;
+    console.log("Parameter ID:", id);
+
+    try {
+        const product = await Product.findById(id);
+        // Check if product exists
+        if (!product) {
+            return res.status(404).json({ status: false, message: "Product not found." });
+
+        } else {
+            // If product exists, send it in the response
+            res.status(200).json({ status: true, productDetails: product });
+        }
+    } catch (error) {
+        console.error("Error fetching product:", error.message);
+        res.status(500).json({ status: false, message: "Internal server error while fetching product", });
+    }
+
+})
+//==================|| Product API Routes END -GET BY ID ||==================//
+
 
 
 
@@ -80,14 +106,14 @@ router.put('/edit/:id', async (req, res) => {
             const updateProduct = await Product.findByIdAndUpdate(id, updatedProductData, { new: true });
             //send the response to the frontend
 
-            res.status(200).json({status: true,message: "Product updated successfully", productDetails: updateProduct});
+            res.status(200).json({ status: true, message: "Product updated successfully", productDetails: updateProduct });
         }
 
     } catch (error) {
         // If an error occurs during the update process, log the error and send a response
         console.error("Error updating product:", error.message);
         // Send a 500 status code with an error message
-        res.status(500).json({ status: false, message: "Internal server error while updating product",});
+        res.status(500).json({ status: false, message: "Internal server error while updating product", });
 
     }
 
@@ -112,7 +138,7 @@ router.delete("/delete/:id", async (req, res) => {
         try {
             await Product.findByIdAndDelete(id);
             //send the response to the frontend
-            res.status(200).json({status: true, message: "Product deleted successfully" });
+            res.status(200).json({ status: true, message: "Product deleted successfully" });
         } catch (error) {
             res.status(404).json({ status: true, message: "Product not found or could not be deleted", });
         }
