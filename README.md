@@ -1,6 +1,6 @@
 # ProductHub
 
-ProductHub is a full-stack web application built using the MERN stack (MongoDB, Express.js, React, Node.js). It serves as a robust platform for managing products, including features for creating, reading, updating, and deleting product entries.
+  It serves as a robust platform for managing products, including features for creating, reading, updating, and deleting product entries.
 
 ## Table of Contents
 
