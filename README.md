@@ -54,7 +54,7 @@
    - Start backend server:
      ```bash
      cd backend
-     npm start
+     npm run dev
      ```
    
 
