@@ -136,12 +136,7 @@ The server will run on `http://localhost:5000` by default.
 
 Here’s a sample of possible endpoints (customize based on your implementation):
 
-### Authentication Routes
-
-| Method | Endpoint          | Description            |
-|--------|-------------------|------------------------|
-| POST   | /api/auth/register| Register a new user    |
-| POST   | /api/auth/login   | Authenticate a user    |
+ 
 
 ### Product Routes
 
