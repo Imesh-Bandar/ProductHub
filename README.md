@@ -18,12 +18,9 @@
 ## Features
 
 - **Product Management**: Create, view, update, and delete products.
-- **Responsive UI**: User-friendly interface built with React.
 - **RESTful API**: Robust backend with Express.js and MongoDB.
 
 ## Tech Stack
-
-- **Frontend**: React
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Languages**: JavaScript (100%)
@@ -42,11 +39,7 @@
    npm install
    ```
 
-3. **Install frontend dependencies:**
-   ```bash
-   cd ../frontend
-   npm install
-   ```
+ 
 
 4. **Configure environment variables:**
    - Create a `.env` file in both `backend` and `frontend` directories as needed.
@@ -63,14 +56,9 @@
      cd backend
      npm start
      ```
-   - Start frontend client:
-     ```bash
-     cd ../frontend
-     npm start
-     ```
+   
 
-6. **Open in browser:**  
-   Visit [http://localhost:3000](http://localhost:3000) for the frontend.
+ 
 
 ## Usage
 
@@ -87,13 +75,6 @@ ProductHub/
 │   ├── models/
 │   ├── routes/
 │   └── server.js
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.js
-│   │   └── index.js
-│   └── public/
 └── README.md
 ```
 
@@ -107,12 +88,9 @@ ProductHub/
 - `PUT /api/products/edit/:id` - Update product
 - `DELETE /api/products/delete/:id` - Delete product
 
-### Auth
+ 
 
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-
-> *Note: Endpoints may be protected; use JWT token in headers where required.*
+ 
 
 ## Contributing
 
