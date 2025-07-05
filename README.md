@@ -62,7 +62,7 @@
 
 ## Usage
 
-- Register/login as a user.
+ 
 - Add, edit, or delete products.
 - Explore the product list and use search/filter capabilities.
 
